@@ -26,22 +26,23 @@ day_list = ['первое', 'второе', 'третье', 'четвёртое'
 month_list = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
            'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
 
-kol_vopr = len(dict)
 
 spis_keys = list(dict.keys())
 spis_values = list(dict.values())
 
-print(dict)
-print(spis_keys)
-print(spis_values)
+#print(dict)
+#print(spis_keys)
+#print(spis_values)
 
 otv = 'Да'
 while otv == 'Да':
 
     pravotv = 0
+    neprotv = 0
 
-    rndrez = random.sample(range(len(dict)), 5)
-    print(rndrez)
+    kol_vopr = 5
+    rndrez = random.sample(range(len(dict)), kol_vopr)
+#    print(rndrez)
 
     for iv in rndrez:
         tek_key = spis_keys[iv]
@@ -52,9 +53,8 @@ while otv == 'Да':
             pravotv += 1
         else:
             soo_vnev = 'Не верно. День рождения ' + tek_key + ' - ' + day_list[int(tek_value[:2])-1] + " " + month_list[int(tek_value[3:5])-1] + ' ' + tek_value[6:10] + ' года'
+            neprotv += 1
             print(soo_vnev)
-
-    neprotv = kol_vopr - pravotv
 
     print()
     print('Количество правильных ответов   :', pravotv)

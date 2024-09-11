@@ -3,7 +3,6 @@ stsps = stsps.replace(';', ',')
 stsps = stsps.replace('/', ',')
 
 spis = stsps.split(',')
-print(spis)
 
 spis_uniq = []
 for iss1 in range(len(spis)):

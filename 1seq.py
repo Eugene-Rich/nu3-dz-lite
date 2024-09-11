@@ -5,4 +5,6 @@ for teksp in range(1, kolsp+1):
     tekel = int(input(f'Введите {teksp} элемент : '))
     sp.append(tekel)
 
+sp.sort()
+
 print(sp)
