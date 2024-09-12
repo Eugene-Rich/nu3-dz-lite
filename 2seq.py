@@ -1,6 +1,7 @@
 stsps = input("Введите элементы списка через запятую : ")
 stsps = stsps.replace(';', ',')
 stsps = stsps.replace('/', ',')
+stsps = stsps.replace(' ', '')
 
 spis = stsps.split(',')
 
